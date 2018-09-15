@@ -20,7 +20,7 @@ module top (
 		end
 	end
 
-	assign leds[1] 	= ~buttons[1];
+	assign leds[1] 	= buttons[1];
 
 	nios_setup nios_setup_i (
 		.clk_clk(sys_clk_50m),
