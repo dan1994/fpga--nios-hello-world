@@ -8,7 +8,7 @@ module top (
 
 	logic[$clog2(50_000_000) - 1 : 0] 	cnt;
 
-	always_ff@(posedge clk, negedge rst) begin
+	always_ff@(posedge sys_clk_50m, negedge sys_rst_n) begin
 		if(~sys_rst_n) begin
 			leds[0] 	<= '0;
 		end else begin
