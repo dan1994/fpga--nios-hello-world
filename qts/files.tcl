@@ -3,4 +3,5 @@ set_global_assignment -name TOP_LEVEL_ENTITY top
 
 # Files
 set_global_assignment -name QIP_FILE 			../qsys/nios_setup/synthesis/nios_setup.qip
+set_global_assignment -name QIP_FILE 			../nios/hello_world/mem_init/meminit.qip
 set_global_assignment -name SYSTEMVERILOG_FILE 	../src/top.sv
