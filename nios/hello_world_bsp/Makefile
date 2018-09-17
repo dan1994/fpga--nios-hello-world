@@ -101,7 +101,7 @@ ACDS_VERSION := 18.0
 # BUILD_NUMBER: 614
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/hello_world_from_scratch2/qsys/nios_setup.sopcinfo
+SOPC_FILE := ../../qsys/nios_setup.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

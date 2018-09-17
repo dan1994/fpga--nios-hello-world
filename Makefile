@@ -1,7 +1,6 @@
-ROOT_DIR=/mnt/c/intelFPGA_lite/18.0
-QUARTUS_SH=${ROOT_DIR}/quartus/bin64/quartus_sh.exe
-QSYS_GEN=${ROOT_DIR}/quartus/sopc_builder/bin/qsys-generate.exe
-PGM=${ROOT_DIR}/quartus/bin64/quartus_pgm.exe
+QUARTUS_SH=quartus_sh
+QSYS_GEN=qsys-generate
+PGM=quartus_pgm
 LOG_DIR=logs
 
 fast_burn:
