@@ -3,3 +3,5 @@
 /qsys/nios_setup.sopcinfo
 /pnr/
 /logs/
+/nios/.metadata/
+/nios/RemoteSystemsTempFiles/
