@@ -1,8 +1,14 @@
 BASE_PATH:=$(shell cd $(dir $(abspath $(lastword $(MAKEFILE_LIST))));pwd)
 
-.PHONY: all compile quartus_proj mem_init_generate qsys_gen clean clean_all
+.PHONY: all fast_burn burn compile quartus_proj mem_init_generate qsys_gen clean clean_all
 
 all: compile
+
+fast_burn:
+	make -C ${BASE_PATH}/src/pnr/burning fast_burn
+
+burn:
+	make -C ${BASE_PATH}/src/pnr/burning burn
 
 compile:
 	make -C ${BASE_PATH}/src/pnr/project

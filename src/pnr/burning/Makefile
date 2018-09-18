@@ -1,10 +1,19 @@
-include ../project/base.mk
+BASE_PATH:=$(shell cd $(dir $(abspath $(lastword $(MAKEFILE_LIST))))../../..;pwd)
 
-PGM=quartus_pgm
-CABLE="Cyclone 10 LP Evaluation Kit [USB-1]"
+include ${BASE_PATH}/src/pnr/project/base.mk
+
+PGM:=quartus_pgm
+PGM_FLAGS:=-c "Cyclone 10 LP Evaluation Kit [1-1]" -m JTAG -o "p;${SOF_FILE}" -o "s;VTAP10"
+
+.PHONY: all fast_burn burn
+
+all: burn
 
 fast_burn:
-	${PGM} -c ${CABLE} burn.cdf
+	${PGM} ${PGM_FLAGS}
 
 burn: ${SOF_FILE}
-	${PGM} -c ${CABLE} burn.cdf
+	${PGM} ${PGM_FLAGS}
+
+${SOF_FILE}:
+	make -C ${BASE_PATH}/src/pnr/project
