@@ -5,11 +5,11 @@ include ${BASE_PATH}/src/pnr/project/base.mk
 PGM:=quartus_pgm
 PGM_FLAGS:=-c "Cyclone 10 LP Evaluation Kit [1-1]" -m JTAG -o "p;${SOF_FILE}" -o "s;VTAP10"
 
-.PHONY: all fast_burn burn
+.PHONY: all burn_only burn
 
 all: burn
 
-fast_burn:
+burn_only:
 	${PGM} ${PGM_FLAGS}
 
 burn: ${SOF_FILE}
