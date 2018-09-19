@@ -1,7 +1,3 @@
 .qsys_edit/
-/qsys/nios_setup
-/qsys/nios_setup.sopcinfo
-/pnr/
-/logs/
-/nios/.metadata/
-/nios/RemoteSystemsTempFiles/
+/build/
+/src/qsys/nios_setup.sopcinfo
